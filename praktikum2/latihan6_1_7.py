@@ -1,4 +1,5 @@
-hasil = 0
+jumlah_data = 0
+nilai_rata_rata = 0
 
 while True:
     print()
@@ -7,15 +8,21 @@ while True:
     print('PEMBACAAN DATA DIHENTIKAN DENGAN DATA SENTINEL')
     print('DATA SENTINEL BERUPA SEMBARANG BILANGAN NEGATIF')
     print()
-    bil1 = int(input('Ketik Bilangan Pertama = '))
-    bil2 = int(input('Ketik Bilangan Kedua = '))
+    print("ISIKAN BILANGAN NEGATIF UNTUK SELESAI")
 
-    if bil1 >= bil2:
-        hasil = hasil + 5
-        print(bil1, "-", bil2, "-", bil2, "-", bil2, "-", bil2, "-", bil2 , "=", hasil ," Kali Perulangannya")
-        print()
+    while True:
+        data = float(input("MASUKKAN DATA NILAINYA = "))
+        if data < 0:
+            break
+        jumlah_data += data
+        nilai_rata_rata += 1
 
-    ulang = input("Mau ulang Program Tekan [Y] / Keluar [T] =")
+    if nilai_rata_rata > 0:
+        rata_rata = jumlah_data/nilai_rata_rata
+    else:
+        rata_rata = 0
 
-    if ulang == 'T':
-        break
+    print("\nJUMLAH DATA = ", jumlah_data)
+    print("\nNILAI RATA RATA = ", rata_rata)    
+
+    exit()
